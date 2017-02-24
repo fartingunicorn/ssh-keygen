@@ -1,4 +1,4 @@
-#generate a ssh-key out of a docker container
+# generate a ssh-key out of a docker container
 
 Starting the container using
 
@@ -27,4 +27,8 @@ Use environment variable KEY_GEN_PATH to override the default location. The ssh 
 
 ```
 docker run -v /root/.ssh -e KEY_GEN_PATH=/root/.ssh --name keystore madhub/ssh-keygen
+```
+mount the created data container with correct permissions set
+```
+docker run -ti --volumes-from keystore ubuntu ls -latr /root/.ssh
 ```
