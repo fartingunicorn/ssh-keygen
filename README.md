@@ -26,5 +26,5 @@ Here is a example using a docker data container. This will create a container na
 Use environment variable KEY_GEN_PATH to override the default location. The ssh key is now stored within the docker data container.
 
 ```
-docker run -v /root/.ssh -e KEY_GEN_PATH=/root/.ssh --name keystore ssh-keygen
+docker run -v /root/.ssh -e KEY_GEN_PATH=/root/.ssh --name keystore madhub/ssh-keygen
 ```
