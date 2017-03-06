@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine:3.4
+FROM gliderlabs/alpine:3.5
 MAINTAINER Franz Mathauser <franz.mathauser@gmail.com>
 RUN apk add --update openssh-client
 ENV KEY_GEN_PATH /sshkey
